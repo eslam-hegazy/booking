@@ -1,7 +1,9 @@
+import 'package:action_slider/action_slider.dart';
 import 'package:booking/core/app_router/app_router.dart';
 import 'package:booking/core/extentions/sizedbox_extention.dart';
+import 'package:booking/core/theme/app_colors.dart';
+import 'package:booking/core/theme/app_fonts.dart';
 import 'package:booking/core/widgets/custom_button.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
           },
           home: Scaffold(
             body: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 40.h),
+              padding:  EdgeInsets.symmetric(horizontal: 40.h),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -52,3 +54,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
