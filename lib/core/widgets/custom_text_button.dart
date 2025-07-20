@@ -1,5 +1,5 @@
 import 'package:booking/core/theme/app_colors.dart';
-import 'package:booking/core/theme/app_fonts.dart';
+import 'package:booking/core/theme/app_styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextButton extends StatelessWidget {
@@ -21,7 +21,10 @@ class CustomTextButton extends StatelessWidget {
     return InkWell(
       onTap: press,
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4), // Optional padding
+        padding: const EdgeInsets.symmetric(
+          horizontal: 8,
+          vertical: 4,
+        ), // Optional padding
         decoration: borderColor != null
             ? BoxDecoration(
                 border: Border.all(color: borderColor!, width: 1.0),
@@ -30,7 +33,7 @@ class CustomTextButton extends StatelessWidget {
             : null, // Only apply border if borderColor is not null
         child: Text(
           text,
-          style: AppFonts.boldStyle(
+          style: AppStyles.boldStyle(
             color: textColor,
             fontSize: 14,
             isUnderline: true,

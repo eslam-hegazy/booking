@@ -55,18 +55,41 @@ dependencies:
   flutter:
     sdk: flutter
   cloud_firestore: ^5.6.11
+  slide_to_act: ^2.0.2
+  flutter_native_splash: ^2.4.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
-
+  change_app_package_name: ^1.1.0
+  flutter_launcher_icons: ^0.14.4
 
 flutter_assets:
   assets_path: assets/
   output_path: lib/core/app_assets
   filename: app_assets.dart
   field_prefix:
-
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo/logo.png" 
+  remove_alpha_ios: true
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/fonts/
+    - assets/translations/
+    - assets/logo/
+    - assets/animations/
+
+  fonts:
+    - family: GE_SS_Two
+      fonts:
+        - asset: assets/fonts/GE_SS_Two_Bold.otf
+          weight: 700
+        - asset: assets/fonts/GE_SS_Two_Medium.otf
+          weight: 500
+        - asset: assets/fonts/GE_SS_Two_Light.otf
+          weight: 300

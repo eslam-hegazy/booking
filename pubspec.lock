@@ -25,6 +25,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.5.9"
+  ansicolor:
+    dependency: transitive
+    description:
+      name: ansicolor
+      sha256: "50e982d500bc863e1d703448afdbf9e5a72eb48840a4f766fa361ffd6877055f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.3"
   app_links:
     dependency: transitive
     description:
@@ -209,6 +217,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "5.1.1"
+  change_app_package_name:
+    dependency: "direct dev"
+    description:
+      name: change_app_package_name
+      sha256: "8e43b754fe960426904d77ed4c62fa8c9834deaf6e293ae40963fa447482c4c5"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.5.0"
   characters:
     dependency: transitive
     description:
@@ -225,6 +241,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.4"
+  cli_util:
+    dependency: transitive
+    description:
+      name: cli_util
+      sha256: ff6785f7e9e3c38ac98b2fb035701789de90154024a75b6cb926445e83197d1c
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.4.2"
   clock:
     dependency: transitive
     description:
@@ -349,10 +373,10 @@ packages:
     dependency: "direct main"
     description:
       name: device_preview_plus
-      sha256: "8b195884275b3531982e472f7bfe22eb046ed3cf8eb4c94691861fad3387a7f9"
+      sha256: "8cc4673eb68b4029a1a9701f76e4e351794354ce7ee0641dcba5cd1e78013184"
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.5"
+    version: "2.4.3"
   dio:
     dependency: "direct main"
     description:
@@ -566,6 +590,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.1.5"
+  flutter_launcher_icons:
+    dependency: "direct dev"
+    description:
+      name: flutter_launcher_icons
+      sha256: "10f13781741a2e3972126fae08393d3c4e01fa4cd7473326b94b72cf594195e7"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.14.4"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -587,6 +619,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_native_splash:
+    dependency: "direct main"
+    description:
+      name: flutter_native_splash
+      sha256: "8321a6d11a8d13977fa780c89de8d257cce3d841eecfb7a4cadffcc4f12d82dc"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.6"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -917,6 +957,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.0.11"
+  image:
+    dependency: transitive
+    description:
+      name: image
+      sha256: "4e973fcf4caae1a4be2fa0a13157aa38a8f9cb049db6529aa00b4d71abc4d928"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.5.4"
   image_picker:
     dependency: "direct main"
     description:
@@ -1530,6 +1578,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  slide_to_act:
+    dependency: "direct main"
+    description:
+      name: slide_to_act
+      sha256: cd4ea5019754347d5a2b0375e802ad948610a0e233adfe51a9cc5b3a1fc3a43b
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
   source_gen:
     dependency: transitive
     description:
@@ -1908,4 +1964,4 @@ packages:
     version: "2.1.0"
 sdks:
   dart: ">=3.8.1 <4.0.0"
-  flutter: ">=3.32.6"
+  flutter: ">=3.32.4"

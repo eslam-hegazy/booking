@@ -1,5 +1,5 @@
 import 'package:booking/core/theme/app_colors.dart';
-import 'package:booking/core/theme/app_fonts.dart';
+import 'package:booking/core/theme/app_styles.dart';
 import 'package:booking/core/widgets/custom_required_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -84,10 +84,12 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             filled: true,
             fillColor:
                 widget.fillColor ?? AppColors.primaryColor.withOpacity(0.2),
-            contentPadding:
-                EdgeInsets.symmetric(vertical: 4.h, horizontal: 12.w),
+            contentPadding: EdgeInsets.symmetric(
+              vertical: 4.h,
+              horizontal: 12.w,
+            ),
             hintText: widget.hintText,
-            hintStyle: AppFonts.regularStyle(),
+            hintStyle: AppStyles.lightStyle(),
             border: disableBorder,
             enabledBorder: disableBorder,
             focusedBorder: enableBorder,

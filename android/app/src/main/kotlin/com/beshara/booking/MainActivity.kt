@@ -1,4 +1,4 @@
-package com.example.booking
+package com.beshara.booking
 
 import io.flutter.embedding.android.FlutterActivity
 

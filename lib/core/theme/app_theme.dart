@@ -1,28 +1,43 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:booking/core/theme/app_colors.dart';
-import 'package:booking/core/theme/app_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
 class AppTheme {
-  // light theme
   static final light = ThemeData(
-    primaryColor: AppColors.whiteColor,
+    primaryColor: AppColors.primaryColor,
     scaffoldBackgroundColor: AppColors.whiteColor,
     brightness: Brightness.light,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     appBarTheme: AppBarTheme(
-      backgroundColor: Colors.transparent,
-      elevation: 0,
-      centerTitle: true,
-      titleTextStyle: AppFonts.semiBoldStyle(),
       systemOverlayStyle: SystemUiOverlayStyle(
-        // Status bar color
-        statusBarColor: Colors.transparent,
-        // Status bar brightness (optional)
-        statusBarIconBrightness: Brightness.dark, // For Android (dark icons)
-        statusBarBrightness: Brightness.light, // For iOS (dark icons)
+        statusBarIconBrightness: Brightness.dark,
+        statusBarColor: Colors.white,
       ),
+      backgroundColor: Colors.white,
+      elevation: 8,
+      shadowColor: Colors.black.withOpacity(0.161),
+    ),
+    checkboxTheme: CheckboxThemeData(
+      checkColor: WidgetStateProperty.resolveWith<Color>((
+        Set<WidgetState> states,
+      ) {
+        if (states.contains(WidgetState.disabled)) {
+          return AppColors.primaryColor;
+        }
+        return AppColors.primaryColor;
+      }),
+      fillColor: WidgetStateProperty.resolveWith<Color>((
+        Set<WidgetState> states,
+      ) {
+        if (states.contains(WidgetState.disabled)) {
+          return AppColors.n50Color;
+        }
+        return AppColors.n50Color;
+      }),
+      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+      side: BorderSide(color: AppColors.t75Color),
     ),
   );
   // dark theme

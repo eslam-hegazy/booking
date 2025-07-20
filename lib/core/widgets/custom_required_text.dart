@@ -1,6 +1,5 @@
-
 import 'package:booking/core/theme/app_colors.dart';
-import 'package:booking/core/theme/app_fonts.dart';
+import 'package:booking/core/theme/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -24,15 +23,14 @@ class CustomRequiredText extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 2.h),
                 child: Text(
                   title!,
-                  style: AppFonts.boldStyle(
-                      color: AppColors.primaryColor, fontSize: 14),
+                  style: AppStyles.boldStyle(
+                    color: AppColors.primaryColor,
+                    fontSize: 14,
+                  ),
                 ),
               ),
         isRequired
-            ? Text(
-                "*",
-                style: AppFonts.semiBoldStyle(color: AppColors.redColor),
-              )
+            ? Text("*", style: AppStyles.mediumStyle(color: AppColors.redColor))
             : const SizedBox.shrink(),
       ],
     );

@@ -1,5 +1,5 @@
 import 'package:booking/core/theme/app_colors.dart';
-import 'package:booking/core/theme/app_fonts.dart';
+import 'package:booking/core/theme/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.text,
     this.textColor = AppColors.whiteColor,
-    this.backgroundColor = AppColors.secondColor,
+    this.backgroundColor = AppColors.primaryColor,
     required this.press,
   });
 
@@ -23,13 +23,13 @@ class CustomButton extends StatelessWidget {
       height: 40.h,
       color: backgroundColor,
       shape: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10.h),
+        borderRadius: BorderRadius.circular(5.h),
         borderSide: BorderSide.none,
       ),
       onPressed: press,
       child: Text(
         text,
-        style: AppFonts.semiBoldStyle(color: textColor, fontSize: 14),
+        style: AppStyles.mediumStyle(color: textColor, fontSize: 14),
       ),
     );
   }

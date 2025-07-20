@@ -1,8 +1,7 @@
-
 import 'dart:io';
 import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:booking/core/theme/app_colors.dart';
-import 'package:booking/core/theme/app_fonts.dart';
+import 'package:booking/core/theme/app_styles.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,7 +17,7 @@ class CustomNationalIdDottedBorder extends StatelessWidget {
     super.key,
     this.image,
     required this.height,
-    this.fit=BoxFit.fill,
+    this.fit = BoxFit.fill,
     this.title,
     required this.press,
     required this.placeHolder,
@@ -60,8 +59,10 @@ class CustomNationalIdDottedBorder extends StatelessWidget {
                     child: title != null && title!.isNotEmpty
                         ? Text(
                             "($title)",
-                            style: AppFonts.semiBoldStyle(
-                                fontSize: 14, color: AppColors.whiteColor),
+                            style: AppStyles.mediumStyle(
+                              fontSize: 14,
+                              color: AppColors.whiteColor,
+                            ),
                           )
                         : const SizedBox.shrink(),
                   )
@@ -74,10 +75,7 @@ class CustomNationalIdDottedBorder extends StatelessWidget {
                     child: CircleAvatar(
                       backgroundColor: AppColors.secondColor.withOpacity(0.6),
                       radius: 10.h,
-                      child: Icon(
-                        Icons.camera,
-                        color: AppColors.whiteColor,
-                      ),
+                      child: Icon(Icons.camera, color: AppColors.whiteColor),
                     ),
                   )
                 : const SizedBox.shrink(),
