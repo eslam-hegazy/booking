@@ -61,5 +61,12 @@ dev_dependencies:
     sdk: flutter
   flutter_lints: ^5.0.0
 
+
+flutter_assets:
+  assets_path: assets/
+  output_path: lib/core/app_assets
+  filename: app_assets.dart
+  field_prefix:
+
 flutter:
   uses-material-design: true
