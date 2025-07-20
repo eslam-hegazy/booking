@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
+      // Todo :  change this to your design size
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
