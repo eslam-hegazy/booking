@@ -11,10 +11,12 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await ScreenUtil.ensureScreenSize();
   Bloc.observer = MyBlocObserver();
-  await dotenv.load();
+  // await dotenv.load();
   await CacheHelper.init();
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]).then((val) => runApp(MyApp()));
 }
+
+

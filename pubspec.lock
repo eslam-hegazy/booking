@@ -349,10 +349,10 @@ packages:
     dependency: "direct main"
     description:
       name: device_preview_plus
-      sha256: "8b195884275b3531982e472f7bfe22eb046ed3cf8eb4c94691861fad3387a7f9"
+      sha256: "8cc4673eb68b4029a1a9701f76e4e351794354ce7ee0641dcba5cd1e78013184"
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.5"
+    version: "2.4.3"
   dio:
     dependency: "direct main"
     description:
@@ -1530,6 +1530,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  slide_to_act:
+    dependency: "direct main"
+    description:
+      name: slide_to_act
+      sha256: cd4ea5019754347d5a2b0375e802ad948610a0e233adfe51a9cc5b3a1fc3a43b
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.2"
   source_gen:
     dependency: transitive
     description:
@@ -1908,4 +1916,4 @@ packages:
     version: "2.1.0"
 sdks:
   dart: ">=3.8.1 <4.0.0"
-  flutter: ">=3.32.6"
+  flutter: ">=3.32.4"

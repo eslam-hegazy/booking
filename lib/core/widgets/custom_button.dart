@@ -12,7 +12,7 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.text,
     this.textColor = AppColors.whiteColor,
-    this.backgroundColor = AppColors.secondColor,
+    this.backgroundColor = AppColors.primaryColor,
     required this.press,
   });
 
@@ -23,7 +23,7 @@ class CustomButton extends StatelessWidget {
       height: 40.h,
       color: backgroundColor,
       shape: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10.h),
+        borderRadius: BorderRadius.circular(5.h),
         borderSide: BorderSide.none,
       ),
       onPressed: press,
