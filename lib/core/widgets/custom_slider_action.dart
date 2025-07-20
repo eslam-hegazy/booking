@@ -1,8 +1,5 @@
 import 'package:action_slider/action_slider.dart';
-import 'package:booking/core/theme/app_colors.dart';
-import 'package:booking/core/theme/app_fonts.dart';
 import 'package:booking/core/utils/export_files.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomSlideAction extends StatelessWidget {
   final Function(ActionSliderController) action;
@@ -23,7 +20,7 @@ class CustomSlideAction extends StatelessWidget {
       action: (controller) {
         action(controller);
       },
-      child: Text('Slide to confirm', style: AppFonts.regularStyle()),
+      child: Text('Slide to confirm'),
     );
   }
 }
