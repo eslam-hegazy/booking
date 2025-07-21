@@ -26,7 +26,7 @@ class CustomCachedImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: borderRadius ?? BorderRadius.circular(500.h),
+      borderRadius: borderRadius ?? BorderRadius.circular(0.h),
       child: CachedNetworkImage(
         imageUrl: imageUrl,
         width: width,

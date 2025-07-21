@@ -12,10 +12,10 @@ class AppTheme {
     visualDensity: VisualDensity.adaptivePlatformDensity,
     appBarTheme: AppBarTheme(
       systemOverlayStyle: SystemUiOverlayStyle(
-        statusBarIconBrightness: Brightness.dark,
-        statusBarColor: Colors.white,
+        statusBarIconBrightness: Brightness.light,
+        statusBarColor: AppColors.whiteColor,
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.primaryColor,
       elevation: 8,
       shadowColor: Colors.black.withOpacity(0.161),
     ),

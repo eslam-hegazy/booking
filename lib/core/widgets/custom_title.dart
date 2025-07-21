@@ -1,5 +1,4 @@
-import 'package:booking/core/theme/app_styles.dart';
-import 'package:flutter/material.dart';
+import 'package:booking/core/utils/export_files.dart';
 
 class CustomTitle extends StatelessWidget {
   final String title;
@@ -9,7 +8,10 @@ class CustomTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: AppStyles.mediumStyle(fontWeight: FontWeight.bold),
+      style: AppStyles.mediumStyle(
+        fontWeight: FontWeight.bold,
+        color: AppColors.primaryColor,
+      ),
     );
   }
 }

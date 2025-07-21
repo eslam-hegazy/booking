@@ -1,4 +1,5 @@
 import 'package:booking/core/app_router/app_router.dart';
+import 'package:booking/core/screens/bottom_navigation_bar.dart';
 import 'package:booking/core/theme/app_theme.dart';
 import 'package:booking/modules/onboarding/presentation/screens/initial_settings_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
           navigatorKey: AppRouter.navigatorKey,
           debugShowCheckedModeBanner: false,
           theme: AppTheme.light,
+          themeMode: ThemeMode.light,
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,
           locale: context.locale,
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
               ),
             );
           },
-          home: InitialSettingsScreen(),
+          home:CustomBottomNavigationBar(),
         );
       },
     );
