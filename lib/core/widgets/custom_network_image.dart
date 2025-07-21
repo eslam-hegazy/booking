@@ -1,63 +1,89 @@
+import 'dart:developer';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
-import 'package:skeletonizer/skeletonizer.dart';
 
-import '../theme/app_colors.dart';
-// import 'package:spot_grach_owner/core/utils/export_files.dart';
+import '../app_assets/app_assets.dart';
+import 'shimmer_widget.dart';
 
-class CustomNetworkImage extends StatelessWidget {
-  final String imageUrl;
-  final double width;
+class CachedImageWidget extends StatelessWidget {
+  const CachedImageWidget({
+    super.key,
+    required this.imgUrl,
+    required this.circleShimmer,
+    this.withShimmer = true,
+    this.isUserImg = false,
+    this.withoutHeight = false,
+    this.withoutWidth = false,
+    required this.height,
+    required this.width,
+    this.radius = 0,
+    this.fit = BoxFit.contain,
+  });
+
+  final String imgUrl;
+  final bool circleShimmer;
+  final bool withShimmer;
+  final bool isUserImg;
+  final bool withoutHeight;
+  final bool withoutWidth;
   final double height;
-  final BoxFit? fit;
-  final bool? isCircle;
-  final Color? color;
-  final double borderRadius;
-
-  const CustomNetworkImage({
-    Key? key,
-    required this.imageUrl,
-    this.width = 100,
-    this.height = 100,
-    this.fit = BoxFit.cover,
-    this.isCircle = true,
-    this.color,
-    this.borderRadius = 12.0,
-  }) : super(key: key);
+  final double width;
+  final double radius;
+  final BoxFit fit;
 
   @override
   Widget build(BuildContext context) {
-    // If isCircle is true, set the borderRadius to half of the width or height
-    // double finalBorderRadius =
-    //     isCircle == true ? (width ?? height ?? 100) / 2 : borderRadius;
-
+    log("$imgUrl imgUrl");
     return ClipRRect(
-      borderRadius:
-          BorderRadius.circular(isCircle == true ? ((height) / 2) : borderRadius),
-      child: CachedNetworkImage(
-        imageUrl: imageUrl,
-        width: width,
-        height: height,
-        fit: fit,
-        color: color,
-        placeholder: (context, url) => Container(
-          width: width,
-          height: height,
-          color: AppColors.greyColor,
-          child: Skeletonizer(
-            enabled: true,
-            child: Container(
-              color: AppColors.greyColor,
+      borderRadius: BorderRadius.circular(radius.r),
+      child: imgUrl.endsWith('.svg')
+          ? SvgPicture.network(
+              imgUrl,
+              fit: fit,
+              height: withoutHeight ? null : height,
+              width: withoutWidth ? null : width,
+              placeholderBuilder: withShimmer
+                  ? (context) => circleShimmer
+                        ? ShimmerWidget.circular(height: height, width: width)
+                        : ShimmerWidget.rectangular(
+                            height: height,
+                            width: width,
+                            withRadius: false,
+                          )
+                  : null,
+            )
+          : CachedNetworkImage(
+              imageUrl: imgUrl,
+              fit: fit,
+              height: withoutHeight ? null : height,
+              width: withoutWidth ? null : width,
+              placeholder: withShimmer
+                  ? (context, url) => circleShimmer
+                        ? ShimmerWidget.circular(height: height, width: width)
+                        : ShimmerWidget.rectangular(
+                            height: height,
+                            width: width,
+                            withRadius: false,
+                          )
+                  : null,
+              errorWidget: (context, url, error) => ClipRRect(
+                borderRadius: isUserImg
+                    ? BorderRadius.circular(50.r)
+                    : BorderRadius.zero,
+                child: Container(
+                  color: Colors.grey[200],
+                  height: withoutHeight ? null : height,
+                  width: withoutWidth ? null : width,
+                  child: Icon(
+                    isUserImg ? Icons.person : Icons.broken_image,
+                    size: 30.dg,
+                    color: Colors.grey,
+                  ),
+                ),
+              ),
             ),
-          ),
-        ),
-        errorWidget: (context, url, error) => Container(
-          width: width,
-          height: height,
-          color: Colors.grey[300],
-          child: const Icon(Icons.error, color: Colors.red),
-        ),
-      ),
     );
   }
 }
