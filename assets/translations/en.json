@@ -55,6 +55,7 @@
   "text_heroTitle": "You can book with us easily",
   "button_search": "Search",
   "label_governorate": "Governorate",
+  "select_country": "Select Country",
   "label_region": "Region",
   "label_category": "Category",
   "label_authority": "Authority",
@@ -144,5 +145,11 @@
   "error_fillAllFields": "Please fill all fields.",
   "prompt_selectInitialCountry": "Country",
   "prompt_selectInitialLanguage": "Language",
-  "prompt_slide_to_continue": "Slide to continue"
+  "prompt_slide_to_continue": "Slide to continue",
+  "onboarding_title_1": "All Services, One Platform",
+  "onboarding_subtitle_1": "Book medical appointments, cinema tickets, barber visits, and more—all in one place. Simplify your life with our all-in-one booking app.",
+  "onboarding_title_2": "Easy and Fast Booking",
+  "onboarding_subtitle_2": "Find and book services in just a few taps. No hassle, no waiting—everything is just one click away.",
+  "onboarding_title_3": "Your Time, Your Way",
+  "onboarding_subtitle_3": "Manage all your bookings in one app. Whether it's a doctor's appointment or a movie night, we've got you covered."
 }

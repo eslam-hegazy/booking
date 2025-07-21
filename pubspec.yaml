@@ -59,6 +59,10 @@ dependencies:
   flutter_native_splash: ^2.4.1
   action_slider: ^0.7.0
   shimmer: ^3.0.0
+  smooth_page_indicator: ^1.2.1
+  gap: ^3.0.1
+  dropdown_button2: ^2.3.9
+  country_picker: ^2.0.27
 
 dev_dependencies:
   flutter_test:
@@ -85,6 +89,7 @@ flutter:
     - assets/translations/
     - assets/logo/
     - assets/animations/
+    - assets/icons/
 
   fonts:
     - family: GE_SS_Two

@@ -30,6 +30,10 @@ class Assets {
   /// assets/fonts/stc.otf
   static const String fontsStc = "assets/fonts/stc.otf";
 
+  /// Assets for iconsArrowDown
+  /// assets/icons/arrow_down.png
+  static const String iconsArrowDown = "assets/icons/arrow_down.png";
+
   /// Assets for imagesHerohome
   /// assets/images/herohome.png
   static const String imagesHerohome = "assets/images/herohome.png";
@@ -45,5 +49,13 @@ class Assets {
   /// Assets for logoSplashLogo
   /// assets/logo/splash_logo.png
   static const String logoSplashLogo = "assets/logo/splash_logo.png";
+
+  /// Assets for translationsAr
+  /// assets/translations/ar.json
+  static const String translationsAr = "assets/translations/ar.json";
+
+  /// Assets for translationsEn
+  /// assets/translations/en.json
+  static const String translationsEn = "assets/translations/en.json";
 }
 

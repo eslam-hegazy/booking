@@ -22,7 +22,7 @@ void main() async {
       EasyLocalization(
         supportedLocales: const [Locale('en'), Locale('ar')],
         path: AppConstants.translationsPath,
-        startLocale: Locale('en'),
+        startLocale: Locale('ar'),
         saveLocale: true,
         useOnlyLangCode: true,
         child: MyApp(),

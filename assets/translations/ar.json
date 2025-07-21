@@ -20,6 +20,7 @@
   "alt_instagram": "إنستاجرام",
   "alt_twitter": "تويتر",
   "title_login": "دخول",
+  "select_country": "حدد البلد",
   "label_email": "البريد الإلكتروني",
   "label_password": "كلمة المرور",
   "option_rememberMe": "تذكرني",
@@ -144,5 +145,11 @@
   "error_fillAllFields": "يرجى ملء جميع الحقول.",
   "prompt_selectInitialCountry": "الدولة",
   "prompt_selectInitialLanguage": "اللغة",
-  "prompt_slide_to_continue": "اسحب للاستمرار"
+  "prompt_slide_to_continue": "اسحب للاستمرار",
+  "onboarding_title_1": "كل الخدمات في مكان واحد",
+  "onboarding_subtitle_1": "احجز مواعيد طبية، تذاكر سينما، زيارات حلاق والمزيد — كل ذلك من مكان واحد. بسّط حياتك مع تطبيق الحجز الشامل الخاص بنا.",
+  "onboarding_title_2": "حجز سهل وسريع",
+  "onboarding_subtitle_2": "ابحث عن الخدمات واحجزها في بضع نقرات فقط. بدون تعقيد، بدون انتظار — كل شيء على بُعد ضغطة واحدة.",
+  "onboarding_title_3": "وقتك على طريقتك",
+  "onboarding_subtitle_3": "نظّم جميع حجوزاتك من خلال تطبيق واحد. سواء كانت زيارة طبيب أو ليلة سينمائية، نحن هنا لخدمتك."
 }

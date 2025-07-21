@@ -24,6 +24,7 @@ abstract class  LocaleKeys {
   static const alt_instagram = 'alt_instagram';
   static const alt_twitter = 'alt_twitter';
   static const title_login = 'title_login';
+  static const select_country = 'select_country';
   static const label_email = 'label_email';
   static const label_password = 'label_password';
   static const option_rememberMe = 'option_rememberMe';
@@ -149,5 +150,11 @@ abstract class  LocaleKeys {
   static const prompt_selectInitialCountry = 'prompt_selectInitialCountry';
   static const prompt_selectInitialLanguage = 'prompt_selectInitialLanguage';
   static const prompt_slide_to_continue = 'prompt_slide_to_continue';
+  static const onboarding_title_1 = 'onboarding_title_1';
+  static const onboarding_subtitle_1 = 'onboarding_subtitle_1';
+  static const onboarding_title_2 = 'onboarding_title_2';
+  static const onboarding_subtitle_2 = 'onboarding_subtitle_2';
+  static const onboarding_title_3 = 'onboarding_title_3';
+  static const onboarding_subtitle_3 = 'onboarding_subtitle_3';
 
 }

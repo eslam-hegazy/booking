@@ -1,7 +1,6 @@
 import 'package:booking/core/app_router/app_router.dart';
-import 'package:booking/core/extentions/sizedbox_extention.dart';
-import 'package:booking/core/widgets/custom_button.dart';
-import 'package:booking/modules/home/file.dart';
+import 'package:booking/core/theme/app_theme.dart';
+import 'package:booking/modules/onboarding/presentation/screens/initial_settings_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,7 +19,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           navigatorKey: AppRouter.navigatorKey,
           debugShowCheckedModeBanner: false,
-          themeMode: ThemeMode.light,
+          theme: AppTheme.light,
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,
           locale: context.locale,
@@ -35,10 +34,9 @@ class MyApp extends StatelessWidget {
               ),
             );
           },
-          home: HomeScreen(),
+          home: InitialSettingsScreen(),
         );
       },
     );
   }
 }
-

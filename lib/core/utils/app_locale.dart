@@ -7,8 +7,8 @@ import 'package:get/get.dart';
 import '../app_router/app_router.dart';
 
 class AppLocale {
-  static const Locale english = Locale('en', 'US');
-  static const Locale arabic = Locale('ar', 'EG');
+  static const Locale english = Locale('en');
+  static const Locale arabic = Locale('ar');
   static bool get isEnglish => AppRouter.currentContext!.locale == english;
   static Locale getCurrentLang = isEnglish ? english : arabic;
   static toggleLocale() async {
