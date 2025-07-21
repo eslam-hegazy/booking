@@ -141,7 +141,7 @@ class _DropdownListWidgetState extends State<DropdownListWidget> {
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                         style: AppStyles.mediumStyle(
-                          fontSize: 12.sp,
+                          fontSize: 12,
                           color: AppColors.mutedGray,
                         ),
                       )
@@ -150,7 +150,7 @@ class _DropdownListWidgetState extends State<DropdownListWidget> {
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                         style: AppStyles.mediumStyle(
-                          fontSize: 12.sp,
+                          fontSize: 12,
                           color: AppColors.mutedGray,
                         ),
                       ),
@@ -175,7 +175,7 @@ class _DropdownListWidgetState extends State<DropdownListWidget> {
                             ? Text(
                                 item,
                                 style: AppStyles.mediumStyle(
-                                  fontSize: 12.sp,
+                                  fontSize: 12,
                                   color: AppColors.mutedGray,
                                 ),
                               )
@@ -187,7 +187,7 @@ class _DropdownListWidgetState extends State<DropdownListWidget> {
                                   item,
                                   overflow: TextOverflow.ellipsis,
                                   style: AppStyles.mediumStyle(
-                                    fontSize: 12.sp,
+                                    fontSize: 12,
                                     color: AppColors.mutedGray,
                                   ),
                                 ),

@@ -1,6 +1,11 @@
+import 'package:booking/core/app_router/app_router.dart';
+import 'package:booking/core/di/dependancy_injection.dart';
 import 'package:booking/core/theme/app_colors.dart';
+import 'package:booking/modules/auth/logic/login_cubit/login_cubit.dart';
+import 'package:booking/modules/auth/presentation/screens/login_screen.dart';
 import 'package:booking/modules/onboarding/presentation/widgets/onboarding_nav_btn_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -49,7 +54,12 @@ class OnboardingNavigation extends StatelessWidget {
             icon: isLastPage ? Icons.check : Icons.arrow_forward,
             onPressed: () {
               if (isLastPage) {
-                /////
+                AppRouter.off(
+                  () => BlocProvider(
+                    create: (_) => getIt<LoginCubit>(),
+                    child: LoginScreen(),
+                  ),
+                );
               } else {
                 controller.nextPage(
                   duration: const Duration(milliseconds: 300),

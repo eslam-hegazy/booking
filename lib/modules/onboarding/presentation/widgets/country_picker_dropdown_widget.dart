@@ -35,7 +35,7 @@ class CountryPickerDropdown extends StatelessWidget {
                 child: Text(
                   country!.name,
                   style: AppStyles.mediumStyle(
-                    fontSize: 12.sp,
+                    fontSize: 12,
                     color: AppColors.mutedGray,
                   ),
                 ),
@@ -45,7 +45,7 @@ class CountryPickerDropdown extends StatelessWidget {
                 child: Text(
                   LocaleKeys.prompt_selectCountry.tr(),
                   style: AppStyles.mediumStyle(
-                    fontSize: 12.sp,
+                    fontSize: 12,
                     color: AppColors.mutedGray,
                   ),
                 ),

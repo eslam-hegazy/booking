@@ -1,0 +1,6 @@
+Booking app  -  samy 
+
+
+Todo :
+
+complete auth cycle starting from otp -  handle naviagtion from onboarding to login to be replacement

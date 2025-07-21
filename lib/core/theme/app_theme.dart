@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:booking/core/theme/app_colors.dart';
+import 'package:booking/core/theme/app_font.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -8,6 +9,8 @@ class AppTheme {
   static final light = ThemeData(
     primaryColor: AppColors.primaryColor,
     scaffoldBackgroundColor: AppColors.whiteColor,
+    fontFamily: AppFonts.appFontFamily,
+
     brightness: Brightness.light,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     appBarTheme: AppBarTheme(

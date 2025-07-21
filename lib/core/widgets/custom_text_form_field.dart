@@ -20,6 +20,7 @@ class CustomTextFormField extends StatefulWidget {
   final TextAlign? textAlign;
   final Color? fillColor;
   final VoidCallback? onTap;
+  final TextStyle? labelStyle;
 
   const CustomTextFormField({
     super.key,
@@ -36,6 +37,7 @@ class CustomTextFormField extends StatefulWidget {
     this.maxLine,
     this.textAlign,
     this.fillColor,
+    this.labelStyle,
     this.onTap,
   });
 
@@ -55,19 +57,27 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
     final enableBorder = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(10.h),
-      borderSide: BorderSide(color: AppColors.secondColor),
+      borderRadius: BorderRadius.circular(12.h),
+      borderSide: BorderSide(color: AppColors.t50Color),
     );
 
     final disableBorder = OutlineInputBorder(
-      borderRadius: BorderRadius.circular(10.h),
-      borderSide: BorderSide.none,
+      borderRadius: BorderRadius.circular(12.h),
+      borderSide: BorderSide(color: AppColors.t50Color),
     );
 
+    final errorBorder = OutlineInputBorder(
+      borderRadius: BorderRadius.circular(12.h),
+      borderSide: BorderSide(color: Colors.red, width: 1.w),
+    );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomRequiredText(title: widget.title, isRequired: widget.isRequired),
+        CustomRequiredText(
+          title: widget.title,
+          isRequired: widget.isRequired,
+          style: widget.labelStyle,
+        ),
         TextFormField(
           controller: widget.controller,
           keyboardType: widget.textInputType,
@@ -80,10 +90,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
           maxLines: widget.maxLine ?? 1,
           obscureText: widget.isPassword ? _obscureText : false,
           cursorColor: AppColors.secondColor,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           decoration: InputDecoration(
             filled: true,
-            fillColor:
-                widget.fillColor ?? AppColors.primaryColor.withOpacity(0.2),
+            fillColor: widget.fillColor ?? AppColors.whiteColor,
             contentPadding: EdgeInsets.symmetric(
               vertical: 4.h,
               horizontal: 12.w,
@@ -94,6 +104,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             enabledBorder: disableBorder,
             focusedBorder: enableBorder,
             disabledBorder: disableBorder,
+            errorBorder: errorBorder,
+            focusedErrorBorder: errorBorder,
+
             suffixIcon: widget.isPassword
                 ? IconButton(
                     icon: Icon(

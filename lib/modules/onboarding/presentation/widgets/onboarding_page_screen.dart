@@ -22,7 +22,7 @@ class OnboardingPage extends StatelessWidget {
             item.title,
             textAlign: TextAlign.center,
             style: AppStyles.boldStyle(
-              fontSize: 22,
+              fontSize: 22.sp,
               color: AppColors.darkBlueColor,
             ),
           ),
@@ -31,7 +31,7 @@ class OnboardingPage extends StatelessWidget {
             item.subtitle,
             textAlign: TextAlign.center,
             style: AppStyles.mediumStyle(
-              fontSize: 16,
+              fontSize: 16.sp,
               color: AppColors.mutedGray,
               height: 1.5,
             ),
