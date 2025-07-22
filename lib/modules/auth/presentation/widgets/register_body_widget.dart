@@ -1,9 +1,14 @@
+import 'package:booking/core/app_router/app_router.dart';
+import 'package:booking/core/di/dependancy_injection.dart';
 import 'package:booking/core/utils/app_sizes.dart';
+import 'package:booking/modules/auth/logic/login_cubit/login_cubit.dart';
 import 'package:booking/modules/auth/logic/register_cubit/register_cubit.dart';
 import 'package:booking/core/utils/export_files.dart';
 import 'package:booking/core/widgets/custom_button.dart';
+import 'package:booking/modules/auth/presentation/screens/verify_otp_screen.dart';
 import 'package:booking/modules/auth/presentation/widgets/register_fields_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
 class RegisterBodyWidget extends StatefulWidget {
@@ -95,7 +100,12 @@ class _RegisterBodyWidgetState extends State<RegisterBodyWidget> {
                 press: () {
                   if (registerCubit.registerFormKey.currentState?.validate() ??
                       false) {
-                    //Todo//
+                    AppRouter.to(
+                      () => BlocProvider(
+                        create: (context) => getIt<LoginCubit>(),
+                        child: OtpScreen(isFromRegister: true),
+                      ),
+                    );
                   }
                 },
               ),

@@ -2,6 +2,8 @@ import 'package:booking/core/app_router/app_router.dart';
 import 'package:booking/core/di/dependancy_injection.dart';
 import 'package:booking/core/theme/app_theme.dart';
 import 'package:booking/modules/auth/logic/login_cubit/login_cubit.dart';
+import 'package:booking/modules/auth/logic/register_cubit/register_cubit.dart';
+import 'package:booking/modules/auth/presentation/screens/add_password_screen.dart';
 import 'package:booking/modules/onboarding/presentation/screens/initial_settings_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
@@ -38,8 +40,11 @@ class MyApp extends StatelessWidget {
               ),
             );
           },
-          home: BlocProvider(
-            create: (context) => getIt<LoginCubit>(),
+          home: MultiBlocProvider(
+            providers: [
+              BlocProvider(create: (context) => getIt<LoginCubit>()),
+              BlocProvider(create: (context) => getIt<RegisterCubit>()),
+            ],
             child: InitialSettingsScreen(),
           ),
         );

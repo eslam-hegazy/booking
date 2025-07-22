@@ -20,15 +20,15 @@ String? validateEmail(String? value) {
   return null;
 }
 
-String? validateEgyptianPhoneNumber(String? value) {
+String? validatePhoneNumber(String? value) {
   if (value == null || value.isEmpty) {
     return LocaleKeys.error_phoneInvalid.tr();
   }
-  // Egyptian phone number regex pattern
-  final phoneRegex = RegExp(r'^(01)[0-9]{9}$');
-  if (!phoneRegex.hasMatch(value)) {
-    return "invalidPhoneNumberFormat";
-  }
+  // // Egyptian phone number regex pattern
+  // final phoneRegex = RegExp(r'^(01)[0-9]{9}$');
+  // if (!phoneRegex.hasMatch(value)) {
+  //   return "invalidPhoneNumberFormat";
+  // }
   return null;
 }
 

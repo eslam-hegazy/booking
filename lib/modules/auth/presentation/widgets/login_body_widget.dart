@@ -1,9 +1,15 @@
+import 'package:booking/core/app_router/app_router.dart';
+import 'package:booking/core/di/dependancy_injection.dart';
 import 'package:booking/core/utils/app_sizes.dart';
 import 'package:booking/core/utils/export_files.dart';
 import 'package:booking/core/widgets/custom_button.dart';
 import 'package:booking/modules/auth/logic/login_cubit/login_cubit.dart';
+import 'package:booking/modules/auth/logic/register_cubit/register_cubit.dart';
+import 'package:booking/modules/auth/presentation/screens/reset_password_screen.dart';
 import 'package:booking/modules/auth/presentation/widgets/login_fields_widget.dart';
+import 'package:booking/modules/home/presentation/screens/home_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 
 class LoginBodyWidget extends StatefulWidget {
@@ -71,9 +77,27 @@ class _LoginBodyWidgetState extends State<LoginBodyWidget> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    LocaleKeys.link_forgotPassword.tr(),
-                    style: AppStyles.mediumStyle(fontSize: 14),
+                  InkWell(
+                    onTap: () {
+                      AppRouter.to(
+                        () => MultiBlocProvider(
+                          providers: [
+                            BlocProvider(
+                              create: (context) => getIt<LoginCubit>(),
+                            ),
+                            BlocProvider(
+                              create: (context) => getIt<RegisterCubit>(),
+                            ),
+                          ],
+
+                          child: const ResetPasswordScreen(),
+                        ),
+                      );
+                    },
+                    child: Text(
+                      LocaleKeys.link_forgotPassword.tr(),
+                      style: AppStyles.mediumStyle(fontSize: 14),
+                    ),
                   ),
                   Row(
                     children: [
@@ -92,7 +116,7 @@ class _LoginBodyWidgetState extends State<LoginBodyWidget> {
                 press: () {
                   if (loginCubit.loginFormKey.currentState?.validate() ??
                       false) {
-                    //Todo//
+                    AppRouter.to(() => HomeScreen());
                   }
                 },
               ),

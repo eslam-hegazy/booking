@@ -21,6 +21,8 @@ abstract class  LocaleKeys {
   static const link_aboutUs = 'link_aboutUs';
   static const link_contactUs = 'link_contactUs';
   static const alt_facebook = 'alt_facebook';
+  static const pass_confirm = 'pass_confirm';
+  static const add_your_pass = 'add_your_pass';
   static const alt_instagram = 'alt_instagram';
   static const alt_twitter = 'alt_twitter';
   static const title_login = 'title_login';

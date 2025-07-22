@@ -1,10 +1,16 @@
 import 'dart:async';
 
+import 'package:booking/core/app_router/app_router.dart';
+import 'package:booking/core/di/dependancy_injection.dart';
 import 'package:booking/core/utils/app_sizes.dart';
 import 'package:booking/core/widgets/custom_button.dart';
 import 'package:booking/generated/locale_keys.g.dart';
+import 'package:booking/modules/auth/logic/login_cubit/login_cubit.dart';
+import 'package:booking/modules/auth/logic/register_cubit/register_cubit.dart';
+import 'package:booking/modules/auth/presentation/screens/add_password_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:pinput/pinput.dart';
@@ -12,20 +18,22 @@ import 'package:booking/core/theme/app_colors.dart';
 import 'package:booking/core/theme/app_styles.dart';
 
 class OtpScreen extends StatefulWidget {
-  const OtpScreen({super.key});
-
+  const OtpScreen({super.key, this.isFromRegister = false});
+  final bool isFromRegister;
   @override
   State<OtpScreen> createState() => _OtpScreenState();
 }
 
 class _OtpScreenState extends State<OtpScreen> {
-  static const int _start = 60;
+  late LoginCubit loginCubit;
+  final int _start = 60;
   late int _secondsRemaining;
   Timer? _timer;
 
   @override
   void initState() {
     super.initState();
+    loginCubit = LoginCubit.get(context);
     _secondsRemaining = _start;
     _startTimer();
   }
@@ -128,6 +136,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   Pinput(
                     length: 6,
                     defaultPinTheme: defaultPinTheme,
+                    controller: loginCubit.otpController,
                     focusedPinTheme: defaultPinTheme.copyWith(
                       decoration: defaultPinTheme.decoration!.copyWith(
                         border: Border.all(color: AppColors.primaryColor),
@@ -168,7 +177,26 @@ class _OtpScreenState extends State<OtpScreen> {
                       Expanded(
                         child: CustomButton(
                           text: LocaleKeys.button_confirm.tr(),
-                          press: () {},
+                          press: () {
+                            if (loginCubit.otpController.text.length == 6) {
+                              AppRouter.to(
+                                () => MultiBlocProvider(
+                                  providers: [
+                                    BlocProvider(
+                                      create: (context) => getIt<LoginCubit>(),
+                                    ),
+                                    BlocProvider(
+                                      create: (context) =>
+                                          getIt<RegisterCubit>(),
+                                    ),
+                                  ],
+                                  child: AddPasswordScreen(
+                                    isFromRegister: widget.isFromRegister,
+                                  ),
+                                ),
+                              );
+                            }
+                          },
                           backgroundColor: Colors.grey.shade300,
                           textColor: Colors.grey.shade600,
                         ),
