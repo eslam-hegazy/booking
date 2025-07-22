@@ -23,6 +23,7 @@ class AppStyles {
     decoration: isUnderline ? TextDecoration.underline : decoration,
     letterSpacing: letterSpacing,
     decorationColor: decorationColor ?? color,
+    fontFamily: AppFonts.appFontFamily,
   );
 
   static TextStyle mediumStyle({
@@ -69,5 +70,6 @@ class AppStyles {
     decoration: isUnderline ? TextDecoration.underline : decoration,
     letterSpacing: letterSpacing,
     decorationColor: decorationColor ?? color,
+    fontFamily: AppFonts.appFontFamily,
   );
 }

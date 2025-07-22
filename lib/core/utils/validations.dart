@@ -1,26 +1,28 @@
+import 'package:booking/core/utils/export_files.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 String? thisFieldRequired(String? value) {
   if (value == null || value.isEmpty) {
-    return "thisFieldIsRequired";
+    return LocaleKeys.error_fieldRequired.tr();
   }
   return null;
 }
 
 String? validateEmail(String? value) {
   if (value == null || value.isEmpty) {
-    return "thisFieldIsRequired";
+    return LocaleKeys.error_emailInvalid.tr();
   }
   // Email regex pattern
   final emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
   if (!emailRegex.hasMatch(value)) {
-    return "pleaseEnterAValidEmailAddress";
+    return LocaleKeys.error_emailInvalid.tr();
   }
   return null;
 }
 
 String? validateEgyptianPhoneNumber(String? value) {
   if (value == null || value.isEmpty) {
-    return "thisFieldIsRequired";
+    return LocaleKeys.error_phoneInvalid.tr();
   }
   // Egyptian phone number regex pattern
   final phoneRegex = RegExp(r'^(01)[0-9]{9}$');
@@ -42,20 +44,18 @@ String? validateNationalId(String? value) {
 
 String? validatePassword(String? value) {
   if (value == null || value.isEmpty) {
-    return "thisFieldIsRequired";
+    return LocaleKeys.error_passwordRequired.tr();
   }
-  if (value.length < 6) {
-    return "passwordMustBeAtLeastCharacters";
-  }
+
   return null;
 }
 
 String? validateConfirmPassword(String? value, String password) {
   if (value == null || value.isEmpty) {
-    return "pleaseConfirmYourPassword";
+    return LocaleKeys.error_passwordRequired.tr();
   }
   if (value != password.trim()) {
-    return "passwordsDoNotMatch";
+    return LocaleKeys.error_passwordMismatch.tr();
   }
   return null;
 }

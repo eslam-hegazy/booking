@@ -23,7 +23,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       minWidth: double.infinity,
-      height: 40.h,
+      height: 48.h,
       color: backgroundColor,
       shape: OutlineInputBorder(
         borderRadius: BorderRadius.circular(5.h),
@@ -40,7 +40,7 @@ class CustomButton extends StatelessWidget {
           icon == null ? const SizedBox.shrink() : 4.w.pw,
           Text(
             text,
-            style: AppStyles.lightStyle(color: textColor, fontSize: 14),
+            style: AppStyles.mediumStyle(color: textColor, fontSize: 14),
           ),
         ],
       ),

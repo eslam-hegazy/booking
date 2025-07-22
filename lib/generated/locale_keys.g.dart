@@ -24,12 +24,15 @@ abstract class  LocaleKeys {
   static const alt_instagram = 'alt_instagram';
   static const alt_twitter = 'alt_twitter';
   static const title_login = 'title_login';
+  static const new_user = 'new_user';
+  static const register_now = 'register_now';
   static const select_country = 'select_country';
   static const label_email = 'label_email';
   static const label_password = 'label_password';
   static const option_rememberMe = 'option_rememberMe';
   static const link_forgotPassword = 'link_forgotPassword';
-  static const prompt_newUser = 'prompt_newUser';
+  static const alreadyHaveAccount = 'alreadyHaveAccount';
+  static const verify_OTP = 'verify_OTP';
   static const error_fieldRequired = 'error_fieldRequired';
   static const error_emailInvalid = 'error_emailInvalid';
   static const error_passwordRequired = 'error_passwordRequired';

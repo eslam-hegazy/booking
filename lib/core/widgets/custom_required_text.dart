@@ -8,11 +8,12 @@ class CustomRequiredText extends StatelessWidget {
     super.key,
     required this.title,
     required this.isRequired,
+    this.style,
   });
 
   final String? title;
   final bool isRequired;
-
+  final TextStyle? style;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -23,10 +24,12 @@ class CustomRequiredText extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 2.h),
                 child: Text(
                   title!,
-                  style: AppStyles.boldStyle(
-                    color: AppColors.primaryColor,
-                    fontSize: 14,
-                  ),
+                  style:
+                      style ??
+                      AppStyles.boldStyle(
+                        color: AppColors.primaryColor,
+                        fontSize: 14,
+                      ),
                 ),
               ),
         isRequired

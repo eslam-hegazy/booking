@@ -16,7 +16,7 @@ class SlideToContinueButton extends StatelessWidget {
       },
       text: LocaleKeys.prompt_slide_to_continue.tr(),
       textStyle: AppStyles.mediumStyle(
-        fontSize: 16.sp,
+        fontSize: 16,
         color: AppColors.b300Color,
       ),
       outerColor: AppColors.whiteColor,
