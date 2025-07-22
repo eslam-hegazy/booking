@@ -32,6 +32,7 @@ abstract class  LocaleKeys {
   static const option_rememberMe = 'option_rememberMe';
   static const link_forgotPassword = 'link_forgotPassword';
   static const alreadyHaveAccount = 'alreadyHaveAccount';
+  static const verify_OTP = 'verify_OTP';
   static const error_fieldRequired = 'error_fieldRequired';
   static const error_emailInvalid = 'error_emailInvalid';
   static const error_passwordRequired = 'error_passwordRequired';

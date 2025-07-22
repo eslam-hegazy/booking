@@ -1,3 +1,4 @@
+import 'package:booking/core/utils/app_sizes.dart';
 import 'package:booking/modules/auth/logic/register_cubit/register_cubit.dart';
 import 'package:booking/core/utils/export_files.dart';
 import 'package:booking/core/widgets/custom_button.dart';
@@ -27,10 +28,35 @@ class _RegisterBodyWidgetState extends State<RegisterBodyWidget> {
       children: [
         Gap(40.h),
         Container(
+          width: Sizes.getWidth(context),
+          decoration: BoxDecoration(
+            color: AppColors.darkBlueColor,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(16.r),
+              topRight: Radius.circular(16.r),
+            ),
+          ),
+          child: Center(
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 6.h),
+              child: Text(
+                LocaleKeys.button_register.tr(),
+                style: AppStyles.boldStyle(
+                  color: AppColors.whiteColor,
+                  fontSize: 18.sp,
+                ),
+              ),
+            ),
+          ),
+        ),
+        Container(
           padding: EdgeInsets.all(20.w),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(16.r),
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(16.r),
+              bottomRight: Radius.circular(16.r),
+            ),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.shade200,
@@ -41,10 +67,6 @@ class _RegisterBodyWidgetState extends State<RegisterBodyWidget> {
           ),
           child: Column(
             children: [
-              Text(
-                LocaleKeys.button_register.tr(),
-                style: AppStyles.boldStyle(),
-              ),
               RegisterFieldsWidget(),
               Row(
                 children: [

@@ -28,6 +28,7 @@
   "option_rememberMe": "تذكرني",
   "link_forgotPassword": "نسيت كلمة المرور؟",
   "alreadyHaveAccount": "لديك حساب؟",
+  "verify_OTP": "تحقق من الرمز المرسل",
   "error_fieldRequired": "هذا الحقل مطلوب",
   "error_emailInvalid": "يجب إدخال بريد إلكتروني صالح",
   "error_passwordRequired": "كلمة المرور مطلوبة",

@@ -1,3 +1,4 @@
+import 'package:booking/core/utils/app_sizes.dart';
 import 'package:booking/core/utils/export_files.dart';
 import 'package:booking/core/widgets/custom_button.dart';
 import 'package:booking/modules/auth/logic/login_cubit/login_cubit.dart';
@@ -26,10 +27,35 @@ class _LoginBodyWidgetState extends State<LoginBodyWidget> {
       children: [
         Gap(40.h),
         Container(
+          width: Sizes.getWidth(context),
+          decoration: BoxDecoration(
+            color: AppColors.darkBlueColor,
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(16.r),
+              topRight: Radius.circular(16.r),
+            ),
+          ),
+          child: Center(
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 6.h),
+              child: Text(
+                LocaleKeys.title_login.tr(),
+                style: AppStyles.boldStyle(
+                  color: AppColors.whiteColor,
+                  fontSize: 18.sp,
+                ),
+              ),
+            ),
+          ),
+        ),
+        Container(
           padding: EdgeInsets.all(20.w),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(16.r),
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(16.r),
+              bottomRight: Radius.circular(16.r),
+            ),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey.shade200,
@@ -39,8 +65,8 @@ class _LoginBodyWidgetState extends State<LoginBodyWidget> {
             ],
           ),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Text(LocaleKeys.title_login.tr(), style: AppStyles.boldStyle()),
               LoginFieldsWidget(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
