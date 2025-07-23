@@ -7,6 +7,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void customLoading({required BuildContext context}) {
@@ -37,6 +38,18 @@ void customToastMessage({
     textColor: Colors.white,
     fontSize: 16.0,
   );
+}
+
+Future<XFile?> getImageUsingImagePicker(ImageSource source) async {
+  var pickedImage = await ImagePicker().pickImage(
+    source: source,
+    // imageQuality: 25,
+  );
+  if (pickedImage != null) {
+    return XFile(pickedImage.path);
+  } else {
+    return null;
+  }
 }
 
 Future<void> openWhatsApp({required String phoneNumber}) async {

@@ -3,6 +3,8 @@ import 'package:booking/modules/auth/data/repos/login_repo.dart';
 import 'package:booking/modules/auth/data/repos/register_repo.dart';
 import 'package:booking/modules/auth/logic/login_cubit/login_cubit.dart';
 import 'package:booking/modules/auth/logic/register_cubit/register_cubit.dart';
+import 'package:booking/modules/menu/presentation/screens/profile/data/profile_repo.dart';
+import 'package:booking/modules/menu/presentation/screens/profile/logic/profile_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
@@ -22,7 +24,16 @@ Future<void> initGetIt() async {
       // sl()
     ),
   );
+
+  getIt.registerLazySingleton<ProfileRepo>(
+    () => ProfileRepo(
+      // Todo : Discuss about how to inject this
+      // sl()
+    ),
+  );
+
   //* Auth SCREENS Cubits *\\
   getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt()));
   getIt.registerFactory<RegisterCubit>(() => RegisterCubit(getIt()));
+  getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt()));
 }

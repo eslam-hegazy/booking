@@ -45,6 +45,8 @@ abstract class  LocaleKeys {
   static const error_otpInvalid = 'error_otpInvalid';
   static const button_resetPassword = 'button_resetPassword';
   static const button_confirm = 'button_confirm';
+  static const change_pass = 'change_pass';
+  static const edit = 'edit';
   static const button_resend = 'button_resend';
   static const button_cancel = 'button_cancel';
   static const title_confirmOtp = 'title_confirmOtp';
@@ -154,6 +156,7 @@ abstract class  LocaleKeys {
   static const error_fillAllFields = 'error_fillAllFields';
   static const prompt_selectInitialCountry = 'prompt_selectInitialCountry';
   static const prompt_selectInitialLanguage = 'prompt_selectInitialLanguage';
+  static const select_lang = 'select_lang';
   static const prompt_slide_to_continue = 'prompt_slide_to_continue';
   static const onboarding_title_1 = 'onboarding_title_1';
   static const onboarding_subtitle_1 = 'onboarding_subtitle_1';
