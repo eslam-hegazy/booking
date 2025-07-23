@@ -155,5 +155,19 @@
   "onboarding_title_2": "Easy and Fast Booking",
   "onboarding_subtitle_2": "Find and book services in just a few taps. No hassle, no waiting—everything is just one click away.",
   "onboarding_title_3": "Your Time, Your Way",
-  "onboarding_subtitle_3": "Manage all your bookings in one app. Whether it's a doctor's appointment or a movie night, we've got you covered."
+  "onboarding_subtitle_3": "Manage all your bookings in one app. Whether it's a doctor's appointment or a movie night, we've got you covered.",
+  "booking_details":"Booking Details",
+  "capure":"Capure",
+  "custom_details":"Custom Details",
+  "authority_details":"Authority Details",
+  "main_department":"Main Department",
+  "specialty":"Specialty",
+  "service":"Service",
+  "booking_number":"Booking Number",
+  "date":"Date",
+  "time":"Time",
+  "status":"Status",
+  "qr_code":"QR Code",
+  "location":"Location",
+  "address":"Address"
 }
