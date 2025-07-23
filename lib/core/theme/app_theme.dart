@@ -21,6 +21,7 @@ class AppTheme {
       backgroundColor: AppColors.primaryColor,
       elevation: 8,
       shadowColor: Colors.black.withOpacity(0.161),
+      iconTheme: IconThemeData(color: AppColors.whiteColor),
     ),
     checkboxTheme: CheckboxThemeData(
       checkColor: WidgetStateProperty.resolveWith<Color>((

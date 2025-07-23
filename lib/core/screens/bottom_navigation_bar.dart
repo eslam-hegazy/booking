@@ -2,6 +2,7 @@ import 'package:booking/core/utils/export_files.dart';
 import 'package:booking/modules/home/presentation/screens/home_screen.dart';
 import 'package:booking/modules/my_bookings/presentation/screens/my_bookings_screen.dart';
 import 'package:booking/modules/notifications/presentation/screen/notification_screen.dart';
+import 'package:booking/modules/menu/presentation/menu_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
@@ -19,7 +20,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     HomeScreen(),
     MyBookingsScreen(),
     NotificationScreen(),
-    const Center(child: Text("Profile")),
+    const MenuScreen(),
   ];
 
   void _onTabTapped(int index) {
