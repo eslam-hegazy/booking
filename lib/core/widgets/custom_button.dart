@@ -8,14 +8,18 @@ class CustomButton extends StatelessWidget {
   final String text;
   final IconData? icon;
   final Color? textColor;
+  final double? height;
   final Color? backgroundColor;
+  final double? radius;
   final VoidCallback press;
   const CustomButton({
     super.key,
     required this.text,
     this.icon,
+    this.height,
     this.textColor = AppColors.whiteColor,
     this.backgroundColor = AppColors.primaryColor,
+    this.radius,
     required this.press,
   });
 
@@ -23,10 +27,10 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       minWidth: double.infinity,
-      height: 48.h,
+      height: height ?? 48.h,
       color: backgroundColor,
       shape: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(5.h),
+        borderRadius: BorderRadius.circular(radius ?? 5.h),
         borderSide: BorderSide.none,
       ),
       onPressed: press,
@@ -36,7 +40,7 @@ class CustomButton extends StatelessWidget {
         children: [
           icon == null
               ? const SizedBox.shrink()
-              : Icon(Icons.camera, color: AppColors.whiteColor),
+              : Icon(icon, color: AppColors.whiteColor),
           icon == null ? const SizedBox.shrink() : 4.w.pw,
           Text(
             text,

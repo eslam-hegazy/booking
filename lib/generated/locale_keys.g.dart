@@ -161,5 +161,19 @@ abstract class  LocaleKeys {
   static const onboarding_subtitle_2 = 'onboarding_subtitle_2';
   static const onboarding_title_3 = 'onboarding_title_3';
   static const onboarding_subtitle_3 = 'onboarding_subtitle_3';
+  static const booking_details = 'booking_details';
+  static const capure = 'capure';
+  static const custom_details = 'custom_details';
+  static const authority_details = 'authority_details';
+  static const main_department = 'main_department';
+  static const specialty = 'specialty';
+  static const service = 'service';
+  static const booking_number = 'booking_number';
+  static const date = 'date';
+  static const time = 'time';
+  static const status = 'status';
+  static const qr_code = 'qr_code';
+  static const location = 'location';
+  static const address = 'address';
 
 }
