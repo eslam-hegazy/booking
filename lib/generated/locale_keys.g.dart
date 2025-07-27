@@ -148,8 +148,6 @@ abstract class  LocaleKeys {
   static const label_relation = 'label_relation';
   static const label_phone = 'label_phone';
   static const button_save = 'button_save';
-  static const title_editDependent = 'title_editDependent';
-  static const title_deleteDependent = 'title_deleteDependent';
   static const button_delete = 'button_delete';
   static const prompt_confirmDeleteDependent = 'prompt_confirmDeleteDependent';
   static const text_error = 'text_error';
@@ -178,5 +176,9 @@ abstract class  LocaleKeys {
   static const qr_code = 'qr_code';
   static const location = 'location';
   static const address = 'address';
+  static const confirm_delete_dependant = 'confirm_delete_dependant';
+  static const title_editDependent = 'title_editDependent';
+  static const title_deleteDependent = 'title_deleteDependent';
+  static const select = 'select';
 
 }

@@ -11,11 +11,13 @@ class CustomButton extends StatelessWidget {
   final double? height;
   final Color? backgroundColor;
   final double? radius;
+  final double? width;
   final VoidCallback press;
   const CustomButton({
     super.key,
     required this.text,
     this.icon,
+    this.width,
     this.height,
     this.textColor = AppColors.whiteColor,
     this.backgroundColor = AppColors.primaryColor,
@@ -26,7 +28,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      minWidth: double.infinity,
+      minWidth: width ?? double.infinity,
       height: height ?? 48.h,
       color: backgroundColor,
       shape: OutlineInputBorder(
@@ -44,7 +46,7 @@ class CustomButton extends StatelessWidget {
           icon == null ? const SizedBox.shrink() : 4.w.pw,
           Text(
             text,
-            style: AppStyles.mediumStyle(color: textColor, fontSize: 14),
+            style: AppStyles.mediumStyle(color: textColor, fontSize: 14.sp),
           ),
         ],
       ),

@@ -7,8 +7,6 @@ import 'package:booking/core/widgets/custom_image_widget.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
-// -- You can remove the Gap import if it's no longer used elsewhere in the file.
-// import 'package:gap/gap.dart';
 
 class DropdownListWidget extends StatefulWidget {
   const DropdownListWidget({

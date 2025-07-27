@@ -4,6 +4,7 @@ import 'package:booking/core/app_router/app_router.dart';
 import 'package:booking/core/utils/app_dialogues.dart';
 import 'package:booking/core/utils/app_locale.dart';
 import 'package:booking/core/utils/export_files.dart';
+import 'package:booking/modules/menu/presentation/screens/dependents/presentation/dependents_screen.dart';
 import 'package:booking/modules/menu/presentation/screens/profile/presentation/profile_screen.dart';
 import 'package:booking/modules/menu/presentation/widgets/menu_list_item_widget.dart';
 import 'package:booking/modules/menu/presentation/widgets/select_country_dialogue_content_widget.dart';
@@ -104,7 +105,9 @@ class _MenuScreenState extends State<MenuScreen> {
             MenuListItem(
               icon: FontAwesomeIcons.users,
               title: LocaleKeys.title_dependents,
-              onTap: () {},
+              onTap: () {
+                AppRouter.to(() => DependantsScreen());
+              },
             ),
             MenuListItem(
               icon: FontAwesomeIcons.circleQuestion,

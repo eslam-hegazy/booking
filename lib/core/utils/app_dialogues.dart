@@ -14,4 +14,17 @@ class DialogAndBottomSheets {
       }
     });
   }
+
+  static AlertDialog showInfoDialog({
+    required Widget title,
+    required Widget body,
+    required List<Widget>? actions,
+  }) {
+    return AlertDialog(
+      backgroundColor: AppColors.whiteColor,
+      title: title,
+      content: body,
+      actions: actions,
+    );
+  }
 }

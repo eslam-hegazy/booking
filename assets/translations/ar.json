@@ -17,7 +17,7 @@
   "link_aboutUs": "من نحن",
   "link_contactUs": "اتصل بنا",
   "alt_facebook": "فيسبوك",
-   "pass_confirm": "تأكيد كلمة المرور",
+  "pass_confirm": "تأكيد كلمة المرور",
   "add_your_pass": "أضف كلمة المرور الخاصة بك",
   "alt_instagram": "إنستاجرام",
   "alt_twitter": "تويتر",
@@ -41,8 +41,8 @@
   "error_otpInvalid": "يجب أن يتكون من 6 أرقام",
   "button_resetPassword": "إعادة تعيين كلمة المرور",
   "button_confirm": "تأكيد",
-    "change_pass": "تغيير كلمة المرور",
-    "edit": "تعديل",
+  "change_pass": "تغيير كلمة المرور",
+  "edit": "تعديل",
   "button_resend": "إعادة إرسال",
   "button_cancel": "إلغاء",
   "title_confirmOtp": "تأكيد رمز OTP",
@@ -144,8 +144,7 @@
   "label_relation": "العلاقة",
   "label_phone": "الهاتف",
   "button_save": "حفظ",
-  "title_editDependent": "تعديل مرافق",
-  "title_deleteDependent": "حذف مرافق",
+
   "button_delete": "حذف",
   "prompt_confirmDeleteDependent": "هل أنت متأكد من رغبتك في حذف هذا المرافق",
   "text_error": "خطأ",
@@ -173,5 +172,9 @@
   "status": "الحالة",
   "qr_code": "رمز الاستجابة السريعة (QR)",
   "location": "الموقع",
-  "address":"العنوان"
+  "address": "العنوان",
+  "confirm_delete_dependant": "هل أنت متأكد من رغبتك في حذف هذا المرافق؟",
+  "title_editDependent": "تعديل المرافق",
+  "title_deleteDependent": "حذف المرافق",
+  "select": "اختر"
 }
