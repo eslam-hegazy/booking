@@ -4,7 +4,6 @@ import 'package:booking/core/screens/bottom_navigation_bar.dart';
 import 'package:booking/core/theme/app_theme.dart';
 import 'package:booking/modules/auth/logic/login_cubit/login_cubit.dart';
 import 'package:booking/modules/auth/logic/register_cubit/register_cubit.dart';
-import 'package:booking/modules/onboarding/presentation/screens/initial_settings_screen.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
