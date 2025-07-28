@@ -20,6 +20,7 @@ class CustomTextFormField extends StatefulWidget {
   final TextAlign? textAlign;
   final Color? fillColor;
   final VoidCallback? onTap;
+  final Widget? prefixIcon;
   final TextStyle? labelStyle;
 
   const CustomTextFormField({
@@ -35,6 +36,7 @@ class CustomTextFormField extends StatefulWidget {
     this.isPassword = false,
     this.readOnly,
     this.maxLine,
+    this.prefixIcon,
     this.textAlign,
     this.fillColor,
     this.labelStyle,
@@ -99,6 +101,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
               horizontal: 12.w,
             ),
             hintText: widget.hintText,
+            prefixIcon: widget.prefixIcon,
             hintStyle: AppStyles.lightStyle(),
             border: disableBorder,
             enabledBorder: disableBorder,

@@ -12,29 +12,35 @@ class CategoryScreen extends StatelessWidget {
       body: ListView(
         children: [
           14.h.ph,
-          Row(
-            children: [
-              Expanded(
-                child: DropdownListWidget(
-                  currentValue: "Government",
-                  listValues: ["Government"],
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.w),
+            child: Row(
+              children: [
+                Expanded(
+                  child: DropdownListWidget(
+                    maxLength: 8,
+                    currentValue: "Government",
+                    listValues: ["Government"],
+                  ),
                 ),
-              ),
-              4.w.pw,
-              Expanded(
-                child: DropdownListWidget(
-                  currentValue: "Region",
-                  listValues: ["Region"],
+                2.w.pw,
+                Expanded(
+                  child: DropdownListWidget(
+                    maxLength: 8,
+                    currentValue: "Region",
+                    listValues: ["Region"],
+                  ),
                 ),
-              ),
-              4.w.pw,
-              Expanded(
-                child: DropdownListWidget(
-                  currentValue: "Category",
-                  listValues: ["Category"],
+                2.w.pw,
+                Expanded(
+                  child: DropdownListWidget(
+                    maxLength: 8,
+                    currentValue: "Category",
+                    listValues: ["Category"],
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           14.h.ph,
           CustomGridViewCategory(),

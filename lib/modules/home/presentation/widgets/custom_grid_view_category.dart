@@ -1,7 +1,7 @@
 import 'package:booking/core/app_router/app_router.dart';
 import 'package:booking/core/utils/export_files.dart';
 import 'package:booking/core/widgets/custom_cache_image.dart';
-import 'package:booking/modules/home/presentation/screens/category_screen.dart';
+import 'package:booking/modules/home/presentation/screens/category_services_screen.dart';
 
 class CustomGridViewCategory extends StatelessWidget {
   const CustomGridViewCategory({super.key});
@@ -27,7 +27,7 @@ class CustomGridViewCategory extends StatelessWidget {
 
   Widget _customItem() {
     return GestureDetector(
-      onTap: () => AppRouter.to(() => CategoryScreen()),
+      onTap: () => AppRouter.to(() => CategoryServicesScreen()),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
