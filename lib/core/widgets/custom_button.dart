@@ -27,7 +27,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialButton(
       minWidth: double.infinity,
-      height: height ?? 48.h,
+      height: height ?? 45.h,
       color: backgroundColor,
       shape: OutlineInputBorder(
         borderRadius: BorderRadius.circular(radius ?? 5.h),

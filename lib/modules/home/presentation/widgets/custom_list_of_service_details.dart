@@ -3,7 +3,7 @@ import 'package:booking/core/utils/export_files.dart';
 import 'package:booking/core/widgets/custom_button.dart';
 import 'package:booking/core/widgets/custom_cache_image.dart';
 import 'package:booking/core/widgets/custom_star_widget.dart';
-import 'package:booking/modules/home/presentation/screens/service_details_screen.dart';
+import 'package:booking/modules/service_details/presentation/screens/service_details_screen.dart';
 
 class CustomListOfServiceDetails extends StatelessWidget {
   const CustomListOfServiceDetails({super.key});
