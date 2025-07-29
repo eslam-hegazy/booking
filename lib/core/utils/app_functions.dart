@@ -166,3 +166,7 @@ Future<DateTimeRange?> pickDateRange({
 
   return picked;
 }
+
+String formatTextWithEllipsis(String text, {int maxLength = 8}) {
+  return text.length > maxLength ? '${text.substring(0, maxLength)}...' : text;
+}

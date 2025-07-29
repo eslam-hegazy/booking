@@ -28,8 +28,8 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      minWidth: width ?? double.infinity,
-      height: height ?? 48.h,
+      minWidth: double.infinity,
+      height: height ?? 45.h,
       color: backgroundColor,
       shape: OutlineInputBorder(
         borderRadius: BorderRadius.circular(radius ?? 5.h),

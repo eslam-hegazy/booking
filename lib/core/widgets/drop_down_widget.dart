@@ -1,7 +1,7 @@
 import 'package:booking/core/app_assets/app_assets.dart';
 import 'package:booking/core/theme/app_colors.dart';
 import 'package:booking/core/theme/app_styles.dart';
-import 'package:booking/core/utils/app_locale.dart';
+import 'package:booking/core/utils/app_functions.dart';
 import 'package:booking/core/utils/app_sizes.dart';
 import 'package:booking/core/widgets/custom_image_widget.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
@@ -21,6 +21,7 @@ class DropdownListWidget extends StatefulWidget {
     this.width,
     this.dropDownVerticalPadding,
     this.onTap,
+    this.maxLength = 100,
     this.onCancelTap,
     this.isEditInfo = false,
     this.validator,
@@ -36,6 +37,7 @@ class DropdownListWidget extends StatefulWidget {
   final Color? borderColor;
   final Color? backgroundColor;
   final double? width;
+  final int maxLength;
   final double? dropDownVerticalPadding;
   final void Function(String?)? onTap;
   final void Function()? onCancelTap;
@@ -83,9 +85,7 @@ class _DropdownListWidgetState extends State<DropdownListWidget> {
           child: DropdownButtonFormField2<String>(
             decoration: InputDecoration(
               contentPadding: EdgeInsets.symmetric(
-                horizontal: AppLocale.getCurrentLang.languageCode == 'en'
-                    ? 4.w
-                    : 8.w,
+                horizontal: 2.w,
                 vertical: widget.dropDownVerticalPadding ?? 8.h,
               ),
               border: OutlineInputBorder(
@@ -135,7 +135,10 @@ class _DropdownListWidgetState extends State<DropdownListWidget> {
                 ),
                 !widget.isEditInfo
                     ? Text(
-                        widget.currentValue,
+                        formatTextWithEllipsis(
+                          widget.currentValue,
+                          maxLength: widget.maxLength,
+                        ),
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                         style: AppStyles.mediumStyle(
@@ -144,7 +147,10 @@ class _DropdownListWidgetState extends State<DropdownListWidget> {
                         ),
                       )
                     : Text(
-                        widget.currentValue,
+                        formatTextWithEllipsis(
+                          widget.currentValue,
+                          maxLength: widget.maxLength,
+                        ),
                         overflow: TextOverflow.ellipsis,
                         maxLines: 1,
                         style: AppStyles.mediumStyle(

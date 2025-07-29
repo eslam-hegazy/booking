@@ -1,10 +1,10 @@
 import 'package:booking/core/app_router/app_router.dart';
 import 'package:booking/core/utils/export_files.dart';
 import 'package:booking/core/widgets/custom_cache_image.dart';
-import 'package:booking/modules/home/presentation/screens/category_screen.dart';
+import 'package:booking/modules/home/presentation/screens/category_services_screen.dart';
 
-class CustomCategoryWidget extends StatelessWidget {
-  const CustomCategoryWidget({super.key});
+class CustomGridViewCategory extends StatelessWidget {
+  const CustomGridViewCategory({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class CustomCategoryWidget extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 6.h),
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      itemCount: 10,
+      itemCount: 20,
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 3,
         crossAxisSpacing: 10,
@@ -27,7 +27,7 @@ class CustomCategoryWidget extends StatelessWidget {
 
   Widget _customItem() {
     return GestureDetector(
-      onTap: () => AppRouter.to(() => CategoryScreen()),
+      onTap: () => AppRouter.to(() => CategoryServicesScreen()),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
@@ -56,7 +56,7 @@ class CustomCategoryWidget extends StatelessWidget {
               ),
             ),
             4.h.ph,
-            Text("Cinma", style: AppStyles.boldStyle(fontSize: 15)),
+            Text("Oxygen gym", style: AppStyles.boldStyle(fontSize: 15)),
             4.h.ph,
           ],
         ),
